@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#160d2b">
+  <meta name="description" content="A little purple corner made just for you.">
+  <title>For My Queen 💜</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+
+  <header class="header">
+    <a class="brand" href="#home" data-screen="home">♡ my queen</a>
+    <nav aria-label="Main navigation">
+      <button class="nav active" data-screen="home">Home</button>
+      <button class="nav" data-screen="memories">Memories</button>
+      <button class="nav" data-screen="notes">Love notes</button>
+      <button class="nav" data-screen="final">The surprise</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="screen active hero" id="home">
+      <div class="orbit" aria-hidden="true">♡ <span>✦</span></div>
+      <p class="eyebrow">A LITTLE SOMETHING FOR SOMEONE SPECIAL</p>
+      <h1>For My <em>Queen</em></h1>
+      <p class="intro">Some people make ordinary days feel magical.<br>This little world was made to celebrate you.</p>
+      <button class="primary" data-screen="memories">Open your surprise <span>→</span></button>
+      <p class="small">made with a little love & lots of purple</p>
+      <p class="journey">✦ &nbsp; a little journey awaits &nbsp; ✦</p>
+    </section>
+
+    <section class="screen content" id="memories">
+      <div class="heading">
+        <p class="eyebrow">LITTLE MOMENTS, BIG MEANING</p>
+        <h2>Our <em>memories</em></h2>
+        <p>Every picture holds a moment worth keeping.</p>
+      </div>
+      <div class="gallery">
+        <button class="photo" data-photo="./assets/photo-1.jpg" data-caption="A moment to remember"><img src="./assets/photo-1.jpg" alt="Memory 1"><span>A moment to remember</span></button>
+        <button class="photo" data-photo="./assets/photo-2.jpg" data-caption="One of my favourites"><img src="./assets/photo-2.jpg" alt="Memory 2"><span>One of my favourites</span></button>
+        <button class="photo" data-photo="./assets/photo-3.jpg" data-caption="A reason to smile"><img src="./assets/photo-3.jpg" alt="Memory 3"><span>A reason to smile</span></button>
+        <button class="photo" data-photo="./assets/photo-4.jpg" data-caption="More moments to come"><img src="./assets/photo-4.jpg" alt="Memory 4"><span>More moments to come</span></button>
+        <button class="photo" data-photo="./assets/photo-5.jpg" data-caption="A little moment"><img src="./assets/photo-5.jpg" alt="Memory 5"><span>A little moment</span></button>
+        <button class="photo" data-photo="./assets/photo-6.jpg" data-caption="For the memory book"><img src="./assets/photo-6.jpg" alt="Memory 6"><span>For the memory book</span></button>
+        <button class="photo" data-photo="./assets/photo-7.jpg" data-caption="Simply you"><img src="./assets/photo-7.jpg" alt="Her portrait 1"><span>Simply you</span></button>
+        <button class="photo" data-photo="./assets/photo-8.jpg" data-caption="One of a kind"><img src="./assets/photo-8.jpg" alt="Her portrait 2"><span>One of a kind</span></button>
+      </div>
+      <p class="hint">The first six pictures are together; the last two are her portraits.</p>
+      <div class="actions"><button class="secondary" data-screen="home">← Back</button><button class="primary" data-screen="notes">Read your notes →</button></div>
+    </section>
+
+    <section class="screen content" id="notes">
+      <div class="heading">
+        <p class="eyebrow">SEALED WITH AFFECTION</p>
+        <h2>A few words <em>for you</em></h2>
+        <p>Choose an envelope. There's a little message inside each one.</p>
+      </div>
+      <div class="envelopes">
+        <button class="envelope" data-note="You have a way of making even the simplest moments feel special. Never forget how appreciated you are. 💜"><b>✉</b><span>Open when you need a smile</span><small>tap to open</small></button>
+        <button class="envelope" data-note="I hope you always see the wonderful things that make you who you are. Your kindness, your spirit and your laughter matter."><b>✉</b><span>A little reminder</span><small>tap to open</small></button>
+        <button class="envelope" data-note="If today feels ordinary, remember that you bring something lovely into the world just by being yourself."><b>✉</b><span>For an ordinary day</span><small>tap to open</small></button>
+        <button class="envelope" data-note="Thank you for the memories, the conversations and all the little moments that deserve a place in my heart."><b>✉</b><span>Thank you</span><small>tap to open</small></button>
+        <button class="envelope" data-note="Whatever the days ahead bring, I hope they are full of laughter, new memories, courage and beautiful surprises. 💜"><b>✉</b><span>For the days ahead</span><small>tap to open</small></button>
+      </div>
+      <div class="actions"><button class="secondary" data-screen="memories">← Back</button><button class="primary" data-screen="final">One last thing →</button></div>
+    </section>
+
+    <section class="screen final content" id="final">
+      <div class="big-heart">♡</div>
+      <p class="eyebrow">BEFORE YOU GO...</p>
+      <h2>You are <em>one of a kind.</em></h2>
+      <p class="final-message">I made this little place to remind you that you are appreciated, that the little moments matter, and that you deserve all the good things life has to offer.</p>
+      <p class="signature">With love, always ♡</p>
+      <button class="primary" id="sparkle">Send a little sparkle ✨</button>
+      <div class="actions centered"><button class="secondary" data-screen="notes">← Read the notes again</button><button class="secondary" data-screen="home">Back to the beginning ↗</button></div>
+    </section>
+  </main>
+
+  <footer>made for you ♡</footer>
+
+  <aside class="music" aria-label="Music player">
+    <span>♫</span><span class="track">Watangoja · Billy Black</span>
+    <button id="musicButton" type="button">Play music</button>
+    <audio id="music" src="./assets/music.mp3" preload="metadata" loop></audio>
+  </aside>
+
+  <div class="modal" id="photoModal" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="close" id="closePhoto" aria-label="Close">×</button>
+    <img id="largePhoto" alt="Selected memory">
+    <p id="photoCaption"></p>
+  </div>
+  <div class="modal" id="noteModal" hidden role="dialog" aria-modal="true" aria-label="Love note">
+    <article class="letter"><div>✦ &nbsp; ♡ &nbsp; ✦</div><h3>For My Queen</h3><p id="noteText"></p><button class="secondary" id="closeNote">Fold this note</button></article>
+  </div>
+</body>
+</html>
